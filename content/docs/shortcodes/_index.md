@@ -1,7 +1,7 @@
 +++
 title = "Shortcode"
 aliases = [
-  "/en/posts/shortcodes"
+  "/id/posts/shortcodes"
 ]
 +++
 

@@ -18,7 +18,7 @@ series = [
 ]
 images = []
 aliases = [
-  "/en/posts/widgets/comments"
+  "/id/posts/widgets/comments"
 ]
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "Widgets"
 aliases = [
-  "/en/posts/widgets"
+  "/id/posts/widgets"
 ]
 +++

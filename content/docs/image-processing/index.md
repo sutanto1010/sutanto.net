@@ -16,7 +16,7 @@ series = [
   "Docs"
 ]
 aliases = [
-  "/en/posts/image-processing"
+  "/id/posts/image-processing"
 ]
 +++
 

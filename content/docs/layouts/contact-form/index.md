@@ -17,8 +17,8 @@ series = [
 ]
 images = []
 aliases = [
-  "/en/posts/contact-form",
-  "/en/docs/contact-form"
+  "/id/posts/contact-form",
+  "/id/docs/contact-form"
 ]
 +++
 

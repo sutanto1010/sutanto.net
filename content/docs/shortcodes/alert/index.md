@@ -15,7 +15,7 @@ series = [
 images = [
 ]
 aliases = [
-  "/en/posts/shortcodes/alert"
+  "/id/posts/shortcodes/alert"
 ]
 +++
 

@@ -13,7 +13,7 @@ series = [
 ]
 images = []
 aliases = [
-  "/en/posts/get-involved"
+  "/id/posts/get-involved"
 ]
 [menu.main]
   parent = "support"

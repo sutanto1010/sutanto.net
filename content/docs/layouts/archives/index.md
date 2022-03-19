@@ -16,8 +16,8 @@ series = [
 ]
 images = []
 aliases = [
-  "/en/posts/archives",
-  "/en/docs/archives"
+  "/id/posts/archives",
+  "/id/docs/archives"
 ]
 +++
 

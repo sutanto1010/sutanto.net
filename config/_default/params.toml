@@ -16,7 +16,7 @@ brand = "SUTANTO.NET"
 
 palette = "blue" # Default palette. Optional. You'll need to clear the browser cache after modifying this.
 # palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
-#palettes = [] # Disable palette switcher.
+palettes = [] # Disable palette switcher.
 
 # color = "dark" # light, dark or dynamic. Default to dynamic.
 

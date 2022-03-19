@@ -5,9 +5,9 @@ theme = "hugo-theme-bootstrap" # install via git submodule
 copyright = "Copyright © 2022 Sutanto. All Rights Reserved."
 
 # Multilingual mode
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true # If you use only one language comment this option
-#disableLanguages = ["fr", "zh-cn" ,"zh-tw"] # Uncomment in order to disable one or more language
+defaultContentLanguage = "id"
+#defaultContentLanguageInSubdir = true # If you use only one language comment this option
+disableLanguages = ["en","fr", "zh-cn" ,"zh-tw"] # Uncomment in order to disable one or more language
 
 # Pagination
 paginate = 10

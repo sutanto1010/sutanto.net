@@ -17,7 +17,7 @@ series = [
 images = []
 weight = 980
 aliases = [
-  "/en/posts/configuration"
+  "/id/posts/configuration"
 ]
 +++
 
