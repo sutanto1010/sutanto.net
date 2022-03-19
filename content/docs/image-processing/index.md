@@ -18,9 +18,6 @@ series = [
 aliases = [
   "/en/posts/image-processing"
 ]
-[menu.footer]
-  parent = "features"
-  weight = 2
 +++
 
 This article offers some use cases for showing how to resize and align images.

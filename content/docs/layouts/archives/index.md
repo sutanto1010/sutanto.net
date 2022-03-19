@@ -19,10 +19,6 @@ aliases = [
   "/en/posts/archives",
   "/en/docs/archives"
 ]
-[menu.footer]
-  parent = "docs"
-  weight = 7
-  pre = '<i class="fas fa-fw fa-file-archive"></i>'
 +++
 
 The archive page is a collection of posts grouped by year.

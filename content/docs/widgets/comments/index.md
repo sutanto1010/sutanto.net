@@ -20,10 +20,6 @@ images = []
 aliases = [
   "/en/posts/widgets/comments"
 ]
-[menu.footer]
-  parent = "features"
-  weight = 7
-  pre = '<i class="fas fa-fw fa-comments"></i>'
 +++
 
 [Disqus](https://disqus.com/) and [Utterances](https://utteranc.es/) comments widgets are supported out of box.

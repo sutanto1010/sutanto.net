@@ -17,9 +17,6 @@ images = []
 aliases = [
   "/en/posts/hooks"
 ]
-[menu.footer]
-  parent = "docs"
-  weight = 6
 +++
 
 As a flexible theme, it should have the ability to customize code and integrate third-party services. Therefore, we brought a feature called hook.

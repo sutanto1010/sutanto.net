@@ -18,9 +18,6 @@ series = [
 ]
 images = []
 weight = 970
-[menu.footer]
-  parent = "docs"
-  weight = 5
 +++
 
 ## Write New Articles
