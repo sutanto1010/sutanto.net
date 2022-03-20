@@ -20,6 +20,7 @@ images = []
 aliases = [
   "/id/posts/widgets/comments"
 ]
+draft = true
 +++
 
 [Disqus](https://disqus.com/) and [Utterances](https://utteranc.es/) comments widgets are supported out of box.

@@ -17,6 +17,7 @@ images = [
 aliases = [
   "/id/posts/shortcodes/alert"
 ]
+draft = true
 +++
 
 This article shows how to use the `alert` shortcode.

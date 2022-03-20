@@ -18,6 +18,7 @@ images = []
 aliases = [
   "/id/posts/shortcodes/online-ide"
 ]
+draft = true
 +++
 
 A detailed description of online IDE shortcodes, such as JSFiddle, CodePen, JSRun.

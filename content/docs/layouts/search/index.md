@@ -19,6 +19,7 @@ aliases = [
   "/id/posts/search",
   "/id/docs/search"
 ]
+draft = true
 +++
 
 It may be difficult for readers to retrieve an article in the case if there are many articles in your site, therefore, we added the search feature.

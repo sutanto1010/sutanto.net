@@ -1,4 +1,3 @@
 +++
 title = "Layouts"
-draft = true
 +++

@@ -21,6 +21,7 @@ images = [
 aliases = [
   "/id/posts/shortcodes/media"
 ]
+draft = true
 +++
 
 A detailed description of media shortcodes, such as Bilibili, Tencent, Youku, iQiyi and Netease Music.

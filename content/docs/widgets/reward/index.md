@@ -18,6 +18,7 @@ images = []
 aliases = [
   "/id/posts/widgets/reward"
 ]
+draft = true
 +++
 
 The reward widget, AKA buy me a coffee widget, gives the readers a way to support a creator through the use of donations or tips.

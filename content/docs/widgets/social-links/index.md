@@ -17,6 +17,7 @@ images = []
 aliases = [
   "/id/posts/widgets/social-links"
 ]
+draft = true
 +++
 
 The `social` parameter is a set of key value pairs of social links that mapping from platform to their user identifier.

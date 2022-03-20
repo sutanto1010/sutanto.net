@@ -19,6 +19,7 @@ aliases = [
   "/id/posts/archives",
   "/id/docs/archives"
 ]
+draft = true
 +++
 
 The archive page is a collection of posts grouped by year.
