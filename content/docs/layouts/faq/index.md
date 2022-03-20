@@ -18,6 +18,7 @@ aliases = [
   "/id/posts/faq",
   "/id/docs/faq"
 ]
+draft = true
 +++
 
 The [FAQ]({{< ref "/faq" >}}) page is a collection of frequently asked questions.

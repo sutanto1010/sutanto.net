@@ -2,7 +2,7 @@
 title = "Image Processing"
 description = "Guide to resize and align images"
 date = 2021-08-15T14:19:06+08:00
-draft = false
+draft = true
 comment = true
 toc = true
 reward = true

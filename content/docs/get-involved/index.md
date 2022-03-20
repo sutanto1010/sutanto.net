@@ -15,6 +15,7 @@ images = []
 aliases = [
   "/id/posts/get-involved"
 ]
+draft = true
 #[menu.main]
 #  parent = "support"
 #  weight = 5

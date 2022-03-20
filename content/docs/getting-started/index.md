@@ -20,6 +20,7 @@ weight = 1000
 aliases = [
   "/id/posts/getting-started"
 ]
+draft = true
 +++
 
 HBS(Hugo Bootstrap) is a fast, responsive and feature-rich Hugo theme for personal blog and documentations.

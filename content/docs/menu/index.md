@@ -21,6 +21,7 @@ aliases = [
   "/id/posts/menu"
 ]
 weight = 970
+draft = true
 +++
 
 We predefined two types of menus: `main` and `footer`, represents the top app bar menus and the footer menus, respectively.

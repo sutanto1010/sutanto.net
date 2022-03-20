@@ -23,6 +23,7 @@ weight = 960
 aliases = [
   "/id/posts/look-and-feel"
 ]
+draft = true
 +++
 
 By default, a site using this theme has the default fonts, colors, and general look and feel.

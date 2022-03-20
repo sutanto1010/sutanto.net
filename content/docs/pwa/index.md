@@ -20,6 +20,7 @@ images = []
 aliases = [
   "/id/posts/pwa"
 ]
+draft = true
 +++
 
 PWAs([Progressive web apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)) are web apps developed using a number of specific technologies and standard patterns to allow them to take advantage of both web and native app features.

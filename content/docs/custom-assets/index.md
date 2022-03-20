@@ -19,6 +19,7 @@ images = []
 aliases = [
   "/id/posts/custom-assets"
 ]
+draft = true
 +++
 
 As a customizable theme, it provides the ability to customize assets, whether it is customizing CSS and JS or introducing third-party CSS and JS.

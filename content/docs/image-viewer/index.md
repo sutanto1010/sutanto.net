@@ -17,6 +17,7 @@ images = []
 aliases = [
   "/id/posts/image-viewer"
 ]
+draft = true
 +++
 
 Image viewer is an image gallery, it will be shown up when you click a non-linkable image.
