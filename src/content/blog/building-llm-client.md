@@ -1,7 +1,7 @@
 ---
 date: 2025-01-27
 title: Building LLM Client - The Motivation
-description: Building a web based LLM client
+description: My motivation for building a new LLM client and the reasons behind it.
 mermaid: true
 mathjax: true
 ---
