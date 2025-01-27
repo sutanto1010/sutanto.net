@@ -1,76 +1,119 @@
 ---
+import {getCollectionByName} from "../utils/getCollectionByName";
+import getUniqueTags from "../utils/getUniqueTags";
+import getCountByCategory from "../utils/getCountByCategory";
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import ThemeIcon from './ThemeIcon.astro'
+import MenuIcon from './MenuIcon.astro'
+import {site, categories, infoLinks} from '../consts';
+import AsideIcon from "./SidebarIcon.astro";
+import {t} from "../i18n/utils";
+import getCountByTagName from "../utils/getCountByTagName";
+const blogs = await getCollectionByName('blog')
+let tagArr = getUniqueTags(blogs);
+let categoryCount = getCountByCategory(blogs);
+let tagCount = getCountByTagName(blogs);
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
-		<div class="social-links">
-			<a href="https://twitter.com/sutanto1010" target="_blank">
-				<span class="sr-only">Follow Astro on Twitter</span>
-				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
-					><path
-						fill="currentColor"
-						d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-					></path></svg
-				>
-			</a>
-			<a href="https://github.com/sutanto1010" target="_blank">
-				<span class="sr-only">Go to Astro's GitHub repo</span>
-				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
-					><path
-						fill="currentColor"
-						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-					></path></svg
-				>
-			</a>
-		</div>
-	</nav>
-</header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
+<header class="fixed top-0 w-full bg-skin-fill text-skin-base z-10">
+  <div class="flex items-center justify-between container">
+    <div class="block xl:hidden">
+      <MenuIcon></MenuIcon>
+    </div>
+    <a class="text-2xl p-4" href="/">{site.title}</a>
+    <div class="flex items-center">
+      <div class="hidden xl:block">
+        <div class="flex items-center space-x-5 pr-4">
+          {
+            categories.map(category => (
+              <HeaderLink href={category.href} icon={category.iconClass} target={category.target ? category.target : '_self'} children={category.children ? category.children : []}>{category.name}</HeaderLink>
+            ))
+          }
+        </div>
+      </div>
+      <ThemeIcon></ThemeIcon>
+      <div class="block xl:hidden">
+        <AsideIcon></AsideIcon>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden text-center overflow-y-auto pb-8" style="height: calc(100vh - 64px)">
+    {
+      categories.map((category) => (
+        <div class="py-2">
+          <a class=" hover:text-skin-active" href={category.href}>
+            <i class={category.iconClass}/>
+            <span>{category.name}</span>
+          </a>
+          {
+            category.children && category.children.length > 0 &&
+            <div class="divider-horizontal"></div>
+          }
+          <div class="space-y-4 text-sm">
+            {
+              category.children && category.children.map(sub =>
+                (
+                  <a class="block hover:text-skin-active" href={sub.href}>
+                    <i class={sub.iconClass}/>
+                    <span>{sub.name}</span>
+                  </a>
+                )
+              )
+            }
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div id="personal-info" class="hidden break-all overflow-y-auto pb-8" style="height: calc(100vh - 64px)">
+    <img class="avatar my-4 mx-auto" src={site.avatar} alt="avatar"/>
+    <div class="mb-2 text-center">{site.motto}</div>
+    <div class="flex items-center justify-center flex-wrap">
+      {
+        infoLinks.map((infoItem) => (
+          <a title={infoItem.name} href={infoItem.outlink} target="_blank">
+            <i class={infoItem.icon + " text-2xl mr-2 cursor-pointer"}/>
+          </a>
+        ))
+      }
+    </div>
+    <div class="divider-horizontal-mini"></div>
+    <div class="text-center">
+      {
+        Object.keys(categoryCount).length > 0 && (
+          <div>
+            <i class="ri-folder-line menu-icon"/>{t('sidebar.categories')}
+          </div>
+        )
+      }
+      {
+        Object.keys(categoryCount).map((category) => (
+          <div class="my-2 break-all truncate">
+            <a class="hover:text-skin-active" title={category + " (" + categoryCount[category] + ")"} href={"/category/" + category}>
+              {category + " (" + categoryCount[category] + ")"}
+            </a>
+          </div>
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-</style>
+        ))
+      }
+      {
+        tagArr.length > 0 && (
+          <div class="divider-horizontal-mini"></div>
+          <div class="text-center">
+            <i class="ri-price-tag-3-line menu-icon"/>
+            {t('sidebar.tags')}
+          </div>
+        )
+      }
+      {
+        tagArr &&
+        tagArr.map((tag) => (
+          <div class="my-2 break-all truncate">
+            <a class="hover:text-skin-active my-2" title={tag} href={"/tags/" + tag}>{tag + " (" + tagCount[tag] + ")"}</a>
+          </div>
+        ))
+      }
+    </div>
+
+  </div>
+</header>

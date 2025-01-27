@@ -1,16 +1,22 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import {site} from "../consts";
+import {getCollection} from "astro:content";
 
 export async function GET(context) {
-	const posts = await getCollection('blog');
-	return rss({
-		title: SITE_TITLE,
-		description: SITE_DESCRIPTION,
-		site: context.site,
-		items: posts.map((post) => ({
-			...post.data,
-			link: `/blog/${post.id}/`,
-		})),
-	});
+  const blog = (await getCollection('blog')).filter(({data}) => {
+    return import.meta.env.PROD ? !data.draft : true
+  });
+  return rss({
+    title: site.title,
+    description: site.description,
+    site: site.url,
+    items: blog.map((post) => ({
+      title: post.data.title,
+      pubDate: post.data.date,
+      description: post.data.description? post.data.description : post.body.substring(0, 140).replace(/#/gi, "") + "...",
+      // Compute RSS link from post `slug`
+      // This example assumes all posts are rendered as `/blog/[slug]` routes
+      link: `/blog/${post.slug}/`,
+    })),
+  });
 }
