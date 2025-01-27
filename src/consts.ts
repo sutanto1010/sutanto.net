@@ -25,7 +25,7 @@ export const site = {
   description: 'I\'m a dreamer', // required
   author: "Sutanto", // required
   avatar: '/avatar.png', // required
-  url: 'https://xxxxxx.com', // required
+  url: 'https://sutanto.net', // required
   motto: 'Actions speak louder than words.',
   recentBlogSize: 5,
   archivePageSize: 25,

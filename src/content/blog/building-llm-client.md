@@ -28,6 +28,10 @@ The field of technology moves at a rapid pace, and staying current with the late
 
 This process not only reinforces existing skills but also encourages the exploration of new frameworks, libraries, and methodologies. It’s a hands-on way to keep up with the latest advancements in software development while also creating something tangible and useful.
 
+### Try the LLM Client I Built
+If you’re curious to see the results of this journey and want to try out the LLM client I built, you can check it out here: [https://bro.brader.id](https://bro.brader.id). This project represents not just a tool, but a learning experience and a step forward in understanding the potential of LLMs. I invite you to explore it and share your feedback!
+
 ### Conclusion
 
 In a world where LLM clients are already abundant, the decision to build another one is driven by a mix of curiosity, practicality, and a commitment to continuous learning. By creating a custom client, one gains a deeper understanding of LLMs, tailors a tool to their specific needs, and stays at the forefront of full-stack development. It’s a project that combines education, innovation, and utility, making it a worthwhile endeavor for anyone passionate about technology and its potential.
+
