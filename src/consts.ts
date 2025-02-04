@@ -48,7 +48,7 @@ export const config = {
   busuanzi: false,
   lang: 'en', // en | zh-cn | zh-Hant | cs
   codeFoldingStartLines: 16, // Need to re-run the project to take effect
-  ga: false, // If you want to integrate with Google Analytics, just enter your GA-ID here.
+  ga: "G-230J2MQLMG", // If you want to integrate with Google Analytics, just enter your GA-ID here.
 
   // memos config
   memosUrl: '', // https://xxxx.xxx.xx
