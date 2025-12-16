@@ -38,6 +38,7 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "wrangler": "^4.54.0"
   }
 }
